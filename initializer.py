@@ -1,3 +1,5 @@
+#works with Python 3.9
+
 from openpyxl import Workbook
 import os
 from openpyxl import load_workbook
@@ -6,7 +8,7 @@ from tkinter import filedialog as fd
 filename = fd.askopenfilename()
 print("File chosen: " + filename)
 wb = load_workbook(filename, data_only=True)
-round_number = 5
+round_number = int(input("Number of rounds want to extract: "))
 
 sheetlist = wb.sheetnames
 for asheet in sheetlist:
